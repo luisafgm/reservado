@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurantes</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <div class="icon-container">
+            <img src="../img/tray.svg" onClick="" class="icon"/>
+            <h1>Reservando</h1>
+            <a  href="#reservasLista"><button class="tusReservas">Tus Reservas</button></a>
+        </div>
+        <div class="contenedor-filtros">
+            <div class="flex-filtros">
+                <select id="filtro-ciudad">
+                </select>
+                <select id="filtro-rubro">
+                </select>
+                <select id="filtro-horario">
+                </select>
+                <button class="buscar">Buscar</button>
+            </div>
+        </div>
+        
+        <div class="contenedor-restaurantes">
+            <div class="flex">
+            </div>
+        </div>
+
+        <div id="reservasLista" class="contenedor-restaurantes">
+                <p class="reservasTableTitle">Tus Reservas</p>
+            <div class="flexReservas">
+                    <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col"id="num">#</th>
+                                <th scope="col"id="nombre">Nombre</th>
+                                <th scope="col"id="hora">Hora</th>
+                                <th scope="col"id="porPersona">Precio Base por persona</th>
+                                <th scope="col"id="precioFinal">Precio Final</th>
+                                <th scope="col"id="cantPersonas">Cant. de personas</th>
+                                <th scope="col"id="estado">Estado</th>
+                                <th scope="col"id="eliminar">Eliminar</th>
+                              </tr>
+                            </thead>
+                            <tbody id="reservasFields">
+
+                            </tbody>
+                          </table>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Completa tu Reserva!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Cantidad de personas:</label>
+                        <input type="text" class="form-control" id="personas-cant">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Ingrese código de descuento si posee:</label>
+                        <input type="text" class="form-control" id="codigo-desc">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="confirmButton" >Confirmar</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        <script type="text/javascript" src="../js/restaurant.js"></script>
+        <script type="text/javascript" src="../js/listado.js"></script>
+        <script type="text/javascript" src="../js/aplicacion.js"></script>
+        <script type="text/javascript" src="../js/reserva.js"></script>
+        
+    </body>
+</html>
